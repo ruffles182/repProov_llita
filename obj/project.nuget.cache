@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "lhj/wlc1Gbk4m+wja7hFvrdKSvu1tHqMviFR7VyyKZcy9TC71TG79qvX+vTEhQVf0nMYkbWLWASFGLwtulxe9A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ruffles182\\source\\repos\\REPORTE WPF\\REPORTE WPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ruffles182\\.nuget\\packages\\firebirdsql.data.firebirdclient\\9.1.1\\firebirdsql.data.firebirdclient.9.1.1.nupkg.sha512",
+    "C:\\Users\\Ruffles182\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\7.0.2\\microsoft.netcore.app.runtime.win-x86.7.0.2.nupkg.sha512",
+    "C:\\Users\\Ruffles182\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\7.0.2\\microsoft.windowsdesktop.app.runtime.win-x86.7.0.2.nupkg.sha512",
+    "C:\\Users\\Ruffles182\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\7.0.2\\microsoft.aspnetcore.app.runtime.win-x86.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

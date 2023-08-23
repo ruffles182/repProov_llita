@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>REPORTE_WPF</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="img\buscar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\buscar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="9.1.1" />
+  </ItemGroup>
+
+</Project>

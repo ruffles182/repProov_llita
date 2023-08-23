@@ -1,0 +1,24 @@
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\REPORTE WPF.exe
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\REPORTE WPF.dll.config
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\REPORTE WPF.deps.json
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\REPORTE WPF.runtimeconfig.json
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\REPORTE WPF.dll
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\REPORTE WPF.pdb
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF.csproj.AssemblyReference.cache
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\MainWindow.g.cs
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\App.g.cs
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF_MarkupCompile.cache
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF_MarkupCompile.lref
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\MainWindow.baml
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF.g.resources
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF.AssemblyInfoInputs.cache
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF.AssemblyInfo.cs
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF.csproj.CoreCompileInputs.cache
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF.csproj.CopyComplete
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF.dll
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\refint\REPORTE WPF.dll
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF.pdb
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\REPORTE WPF.genruntimeconfig.cache
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\ref\REPORTE WPF.dll

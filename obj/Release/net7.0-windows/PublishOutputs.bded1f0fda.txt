@@ -1,0 +1,7 @@
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\publish\REPORTE WPF.exe
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\publish\REPORTE WPF.dll
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\publish\REPORTE WPF.deps.json
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\publish\REPORTE WPF.runtimeconfig.json
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\publish\REPORTE WPF.dll.config
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\publish\REPORTE WPF.pdb
+C:\Users\Ruffles182\source\repos\REPORTE WPF\bin\Release\net7.0-windows\publish\FirebirdSql.Data.FirebirdClient.dll
