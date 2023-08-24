@@ -17,7 +17,8 @@ namespace REPORTE_WPF
         public float costoUnitario { get; set; }
         public float total { get; set; }
         public string codigo { get; set; }
-        public string tmovimiento { get; set; }
+        public string tMovimiento { get; set; }
+        public float tPagar { get; set; }
 
 
     }

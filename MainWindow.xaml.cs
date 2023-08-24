@@ -162,6 +162,7 @@ namespace REPORTE_WPF
                         {
                             using (FbDataReader reader = command.ExecuteReader())
                             {
+                                float ventasSum = 0;
                                 while (reader.Read())
                                 {
                                     string producto = reader.GetString(6);
@@ -192,20 +193,8 @@ namespace REPORTE_WPF
 
                                     float costoUnitario = reader.GetFloat(5);
                                     float total = cantidadAnterior + cantidad;
-
-
-
-                                    //lv_movimientos.Items.Add(new HistorialInventario
-                                    //{
-                                    //    producto = producto,
-                                    //    codigo = codigo,
-                                    //    fecha = fecha,
-                                    //    cantidadAnterior = cantidadAnterior,
-                                    //    cantidad = cantidad,
-                                    //    descripcion = descripcion,
-                                    //    costoUnitario = costoUnitario,
-                                    //    total = total
-                                    //});
+                                    float tPagar = (corteString == "Venta") ? cantidad * costoUnitario *-1 : 0;
+                                    ventasSum += tPagar;
 
                                     dg_historial.Items.Add(new HistorialInventario
                                     {
@@ -216,22 +205,12 @@ namespace REPORTE_WPF
                                         descripcion = descripcion,
                                         cantidad = cantidad,
                                         total = total,
-                                        tmovimiento = tipoMovimiento
+                                        tMovimiento = tipoMovimiento,
+                                        tPagar = tPagar
                                     });
 
-                                    //historial.Add(new HistorialInventario
-                                    //{
-                                    //    fecha = fecha,
-                                    //    producto = producto,
-                                    //    codigo = codigo,
-                                    //    costoUnitario = costoUnitario,
-                                    //    descripcion = descripcion,
-                                    //    cantidad = cantidad,
-                                    //    total = total
-                                    //});
-
                                 }
-                                //dg_historial.ItemsSource = historkial;
+                                lbl_totalSuma.Content = ventasSum;
                             }
                         }
                         catch (FbException ex)
