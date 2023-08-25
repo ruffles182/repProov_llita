@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:REPORTE_WPF"
         mc:Ignorable="d"
-        Title="PDV - Reporte de Proveedores" Height="461" Width="900">
+        Title="PDV - Reporte de Proveedores" Height="461" Width="900"
+        Icon="{StaticResource AppIcon}">
+    <!--Icon="img/icon.ico">-->
 
     <Grid x:Name="frm_main" Margin="0,0,0,0">
         <Grid>
@@ -97,6 +99,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Label x:Name="lbl_buscar" Content="Buscar (Código o nombre):" Grid.Row="0" Margin="10, 10,0,0" />
@@ -110,8 +113,8 @@
                         Width="Auto" 
                         TextChanged="tb_buscarProd_TextChanged" FontSize="16"
                         />
-
-                    <ListBox x:Name="lb_prod_proov" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,10,10,10" Grid.Row="2" SelectionChanged="lb_prod_proov_SelectionChanged">
+                    <Label Content="Productos:" Grid.Row="2" Margin="10,0,10,0" />
+                    <ListBox x:Name="lb_prod_proov" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,0,10,10" Grid.Row="3" SelectionChanged="lb_prod_proov_SelectionChanged">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
@@ -126,34 +129,15 @@
 
                     </ListBox>
                 </Grid>
-
-                <!--<ListView x:Name="lv_movimientos" Margin="0,10,10,37" DockPanel.Dock="Top" Grid.Column="1" HorizontalAlignment="Stretch" >
-                    <ListView.ItemContainerStyle>
-                        <Style TargetType="ListViewItem">
-                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                        </Style>
-                    </ListView.ItemContainerStyle>
-                    <ListView.View>
-
-                        <GridView>
-
-                            <GridViewColumn x:Name="clm_fecha" Header="Fecha" DisplayMemberBinding="{Binding fecha, StringFormat=dd/MM/yyyy HH:mm}" />
-                            <GridViewColumn x:Name="clm_idProd" Header="Producto" DisplayMemberBinding="{Binding producto}"  />
-                            <GridViewColumn x:Name="clm_codigo" Header="Código" DisplayMemberBinding="{Binding codigo}"  />
-                            <GridViewColumn x:Name="clm_descripcion" Header="Movimiento" DisplayMemberBinding="{Binding descripcion}"  />
-                            <GridViewColumn x:Name="clm_cantidad" Header="Cantidad" DisplayMemberBinding="{Binding cantidad}"  />
-                            <GridViewColumn x:Name="clm_costoUnitario" Header="Costo Unitario" DisplayMemberBinding="{Binding costoUnitario}"  />
-                            <GridViewColumn x:Name="clm_total" Header="Total" DisplayMemberBinding="{Binding total}"  />
-                        </GridView>
-                    </ListView.View>
-
-                </ListView>-->
+                
                 <Grid Grid.Column="1">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <DataGrid x:Name="dg_historial" Margin="0,10,10,10" Grid.Row="0" HorizontalAlignment="Stretch">
+                    <Label x:Name="lbl_header" Content="Historial de Movimientos" Grid.Row="0" Margin="10,10,10, 0" FontSize="16" />
+                    <DataGrid x:Name="dg_historial" Margin="10,0,10,0" Grid.Row="1" HorizontalAlignment="Stretch">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Fecha" Width="*" Binding="{Binding fecha, StringFormat=dd/MM/yyyy HH:mm}" />
                             <DataGridTextColumn Header="Producto" Width="*" Binding="{Binding producto}" />
@@ -181,7 +165,7 @@
                             <DataGridTextColumn Header="Total $" Width="*" Binding="{Binding tPagar}" />
                         </DataGrid.Columns>
                     </DataGrid>
-                    <StackPanel Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0,10,0" Orientation="Horizontal">
+                    <StackPanel Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0,10,0" Orientation="Horizontal">
                         <Label Content="TOTAL: " FontSize="20" />
                         <Label x:Name="lbl_totalSuma" FontSize="20" />
                     </StackPanel>

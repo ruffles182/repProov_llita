@@ -17,12 +17,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Globalization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace REPORTE_WPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
 
@@ -42,25 +44,25 @@ namespace REPORTE_WPF
         }
 
         // Define la clase ColumnWidthConverter aquí
-        public class ColumnWidthConverter : IValueConverter
-        {
-            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-            {
-                if (value is double listViewWidth)
-                {
-                    int numColumns = 7; // Número de columnas en el ListView
-                    double columnWidth = listViewWidth / numColumns;
-                    return columnWidth;
-                }
+        //public class ColumnWidthConverter : IValueConverter
+        //{
+        //    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        //    {
+        //        if (value is double listViewWidth)
+        //        {
+        //            int numColumns = 7; // Número de columnas en el ListView
+        //            double columnWidth = listViewWidth / numColumns;
+        //            return columnWidth;
+        //        }
 
-                return DependencyProperty.UnsetValue;
-            }
+        //        return DependencyProperty.UnsetValue;
+        //    }
 
-            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-            {
-                throw new NotImplementedException();
-            }
-        }
+        //    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        //    {
+        //        throw new NotImplementedException();
+        //    }
+        //}
 
         private void CargarDatosComboBox()
         {
@@ -108,20 +110,24 @@ namespace REPORTE_WPF
 
         private void CDHistorialInventario()
         {
-            List<HistorialInventario> historial = new List<HistorialInventario> ();
+            //limpiamos el DataGrid
             if (dg_historial.Items.Count != 0)
             {
                 dg_historial.Items.Clear();
             }
+            //si hay un elemento en el DataBox (un producto seleccionado)
             if (lb_prod_proov.SelectedItem != null)
             {
+                //creamos la lista para enviar al DataGrid
+                List<HistorialInventario> historial = new List<HistorialInventario> ();
+
                 string idProducto = lb_prod_proov.SelectedValue.ToString();
                 string consulta = "SELECT r.PRODUCTO_ID, r.CUANDO_FUE, r.CANTIDAD_ANTERIOR, r.CANTIDAD, r.DESCRIPCION, r.COSTO_UNITARIO, p.DESCRIPCION, p.CODIGO " +
                     "FROM INVENTARIO_HISTORIAL r " +
                     "JOIN PRODUCTOS p ON r.PRODUCTO_ID = p.ID WHERE r.PRODUCTO_ID = " + idProducto;
 
-                Boolean? tempfiltrar = cb_filtrar.IsChecked;
-                Boolean filtrar = false;
+                bool? tempfiltrar = cb_filtrar.IsChecked;
+                bool filtrar = false;
 
                 if (tempfiltrar.HasValue);
                 {
@@ -171,6 +177,12 @@ namespace REPORTE_WPF
                                     int cantidadAnterior = reader.GetInt16(2);
                                     string descripcion = reader.GetString(4);
 
+                                    mandarDebug(descripcion, false);
+
+                                    descripcion = cambiarUtf(descripcion);
+                                    mandarDebug(descripcion, false);
+
+
                                     //ver si fue una venta y tipo de movimiento
                                     string tipoMovimiento = "Entrada"; //0 = entrada, 1 salida, 2 ajuste
                                     int tempCant = reader.GetInt16(3);
@@ -188,8 +200,6 @@ namespace REPORTE_WPF
                                     {
                                         tipoMovimiento = "Ajuste";
                                     }
-
-                                    //"Venta, Recep, Alta , Ajust"
 
                                     float costoUnitario = reader.GetFloat(5);
                                     float total = cantidadAnterior + cantidad;
@@ -210,6 +220,7 @@ namespace REPORTE_WPF
                                     });
 
                                 }
+                                //Acciones adicionales
                                 lbl_totalSuma.Content = ventasSum;
                             }
                         }
@@ -224,8 +235,30 @@ namespace REPORTE_WPF
             }
         }
 
-        private void CDProdPorProovedor(Boolean porCodigo)
+        private string cambiarUtf(string cadena)
         {
+            byte[] utf8_Bytes = new byte[cadena.Length];
+            for (int i = 0; i < cadena.Length; ++i)
+            {
+                utf8_Bytes[i] = (byte)cadena[i];
+            }
+
+            return Encoding.UTF8.GetString(utf8_Bytes, 0, utf8_Bytes.Length);
+        }
+
+        private void mandarDebug(string msg, bool mb) {
+            System.Diagnostics.Trace.WriteLine("######################################################################################");
+            System.Diagnostics.Trace.WriteLine(msg);
+            if (mb)
+            {
+                MessageBox.Show(msg);
+            }
+        }
+
+        private void CDProdPorProovedor(bool porCodigo)
+        {
+            //variable que controla el content del label historial de inventario
+            string header = "Historial de Movimientos";
             if (lb_prod_proov.Items.Count != 0) 
             {
                 lb_prod_proov.Items.Clear();
@@ -264,7 +297,17 @@ namespace REPORTE_WPF
                             if (lb_prod_proov.Items.Count != 0)
                             {
                                 lb_prod_proov.SelectedIndex = 0;
+                                //header = header + " de " + lb_prod_proov.SelectedItem;
+                                var selectedItem = lb_prod_proov.SelectedItem;
+                                if (selectedItem != null)
+                                {
+                                    string nombre = ((ProductoBuscado)selectedItem).nombre;
+                                   
+                                }
+
                             }
+
+                            lbl_header.Content = header;
                         }
                     }
                     catch (FbException ex)

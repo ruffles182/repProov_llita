@@ -22,3 +22,4 @@ C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Debug\net7.0-windows\refint\REP
 C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Debug\net7.0-windows\REPORTE WPF.pdb
 C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Debug\net7.0-windows\REPORTE WPF.genruntimeconfig.cache
 C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Debug\net7.0-windows\ref\REPORTE WPF.dll
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Debug\net7.0-windows\App.baml

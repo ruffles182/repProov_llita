@@ -10,10 +10,12 @@
 
   <ItemGroup>
     <None Remove="img\buscar.png" />
+    <None Remove="img\icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="img\buscar.png" />
+    <Resource Include="img\icon.ico" />
   </ItemGroup>
 
   <ItemGroup>

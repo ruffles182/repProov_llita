@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:REPORTE_WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <BitmapImage x:Key="AppIcon" UriSource="/REPORTE WPF;component/img/icon.ico" />
     </Application.Resources>
 </Application>

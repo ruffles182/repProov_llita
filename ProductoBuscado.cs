@@ -15,5 +15,7 @@ namespace REPORTE_WPF
         {
             return id;
         }
+
+        string getNombre () { return nombre; }
     }
 }
