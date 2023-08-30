@@ -11,6 +11,17 @@
           "lib/net6.0/FirebirdSql.Data.FirebirdClient.dll": {}
         }
       }
+    },
+    "net7.0-windows7.0/win-x86": {
+      "FirebirdSql.Data.FirebirdClient/9.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FirebirdSql.Data.FirebirdClient.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/FirebirdSql.Data.FirebirdClient.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -94,6 +105,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
+            "version": "[7.0.2, 7.0.2]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x86",
+            "version": "[7.0.2, 7.0.2]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
+            "version": "[7.0.2, 7.0.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -103,6 +128,11 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x86": {
+        "#import": []
       }
     }
   }

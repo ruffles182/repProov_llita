@@ -28,7 +28,7 @@ namespace REPORTE_WPF
     public partial class MainWindow : Window
     {
 
-        string connectionString = "User=SYSDBA;Password=masterkey;Database=" + ConfigurationManager.AppSettings["rutaBdd"] + ";DataSource=localhost;Port=3050;";
+        string connectionString = "User=SYSDBA;Password=masterkey;Database=" + ConfigurationManager.AppSettings["rutaBdd"] + ";DataSource=localhost;Port=3050;Charset=UTF8;";
         public MainWindow()
         {
             InitializeComponent();
@@ -205,6 +205,8 @@ namespace REPORTE_WPF
                                     float total = cantidadAnterior + cantidad;
                                     float tPagar = (corteString == "Venta") ? cantidad * costoUnitario *-1 : 0;
                                     ventasSum += tPagar;
+
+                                    //mandarDebug(descripcion, false);
 
                                     dg_historial.Items.Add(new HistorialInventario
                                     {

@@ -481,3 +481,4 @@ C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\win-x86\
 C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\win-x86\REPORTE WPF.pdb
 C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\win-x86\REPORTE WPF.genruntimeconfig.cache
 C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\win-x86\ref\REPORTE WPF.dll
+C:\Users\Ruffles182\source\repos\REPORTE WPF\obj\Release\net7.0-windows\win-x86\App.baml
